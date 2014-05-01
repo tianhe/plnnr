@@ -41,3 +41,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'fuubar'
+  gem 'faker'
+  gem 'pry'
+  gem 'pry-remote'
+  gem 'debugger-pry', require: 'debugger/pry'
+  gem 'debugger'
+  gem "capybara"
+end
+
