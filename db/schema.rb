@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501002551) do
+ActiveRecord::Schema.define(version: 20140504142226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "user_profiles", force: true do |t|
+    t.integer  "credit_score"
+    t.integer  "annual_income"
+    t.integer  "cash"
+    t.integer  "max_budget"
+    t.integer  "min_budget"
+    t.integer  "estimated_mortgage_amount"
+    t.decimal  "estimated_mortgage_rate"
+    t.integer  "actual_mortgage_amount"
+    t.decimal  "actual_mortgage_rate"
+    t.string   "stage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
