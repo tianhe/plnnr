@@ -23,8 +23,8 @@ FactoryGirl.define do
   end
 
   factory :stage do
-    name "MyString"
-    description "MyText"
+    name Faker::Lorem.sentence(3)
+    description Faker::Lorem.paragraph
     position 1
   end
 

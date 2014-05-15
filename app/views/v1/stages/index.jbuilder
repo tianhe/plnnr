@@ -1,2 +1,3 @@
-%h1 Stages#index
-%p Find me in app/views/stages/index.html.haml
+json.stages @stages.each do |stage|
+  json.partial! 'v1/stages/stage', stage: stage
+end

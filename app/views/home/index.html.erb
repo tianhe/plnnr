@@ -1,5 +1,6 @@
 <div class ='stage'>
 <%= @stage.name %>
+
 <%- @stage.tasks.to_a.each do |task| %>
   <div class='task'>
   <%= task.description %>
