@@ -11,7 +11,8 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.integer :actual_mortgage_amount
       t.decimal :actual_mortgage_rate
       t.string :stage
-
+      t.integer :user_id
+      
       t.timestamps
     end
   end

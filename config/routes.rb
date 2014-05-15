@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'stages/index'
+
   get 'stage/index'
 
   devise_for :users

@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140515010339) do
     t.integer  "actual_mortgage_amount"
     t.decimal  "actual_mortgage_rate"
     t.string   "stage"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "annual_net_income"
