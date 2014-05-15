@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515004946) do
+ActiveRecord::Schema.define(version: 20140515010339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140515004946) do
 
   create_table "user_profiles", force: true do |t|
     t.integer  "credit_score"
-    t.integer  "annual_income"
+    t.integer  "annual_gross_income"
     t.integer  "cash"
     t.integer  "max_budget"
     t.integer  "min_budget"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20140515004946) do
     t.string   "stage"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "annual_net_income"
   end
 
   create_table "user_tasks", force: true do |t|

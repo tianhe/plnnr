@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'stage/index'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
     resources :stages,  only: [:index]
     resources :user_tasks,   only: [:update, :index]
     resources :user_actions, only: [:update, :index]
+    resources :user_profiles, only: [:update, :show]
   end
 
   # Example of regular route:
