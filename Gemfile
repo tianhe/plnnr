@@ -9,6 +9,8 @@ gem 'pg'
 gem 'unicorn'
 gem 'devise'
 
+gem 'acts_as_list'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'haml-rails'
@@ -55,5 +57,6 @@ group :development, :test do
   gem 'debugger-pry', require: 'debugger/pry'
   gem 'debugger'
   gem "capybara"
+  gem 'shoulda-matchers'
 end
 
