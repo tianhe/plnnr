@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  namespace :v1 do
+    resources :stages,  only: [:index]
+    resources :user_tasks,   only: [:update, :index]
+    resources :user_actions, only: [:update, :index]
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

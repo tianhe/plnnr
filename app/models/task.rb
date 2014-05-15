@@ -5,5 +5,7 @@ class Task < ActiveRecord::Base
   validates :stage_id, presence: true
   
   belongs_to :stage
-  has_many :actions
+  acts_as_list scope: :stage
+  
+  has_many :actions, -> { order('position ASC') }
 end

@@ -5,4 +5,5 @@ class Action < ActiveRecord::Base
   validates :task_id,     presence: true
 
   belongs_to :task
+  acts_as_list scope: :task
 end
