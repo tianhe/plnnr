@@ -1,12 +1,9 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :action do
-    task_id ""
+  factory :provider do
     name "MyString"
-    description "MyText"
-    position 1
-    type ""
+    description "MyString"
     url "MyString"
   end
 end

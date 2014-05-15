@@ -1,0 +1,16 @@
+<div class ='stage'>
+<%= @stage.name %>
+<%- @stage.tasks.to_a.each do |task| %>
+  <div class='task'>
+  <%= task.description %>
+  <%- task.main_actions.to_a.each do |main| %>
+    <div class='main-action'>
+      <%= main.description %>
+    </div>
+  <% end %>
+  </div>
+<% end %>
+</div>
+
+
+<%= javascript_include_tag "templates/all" %>
