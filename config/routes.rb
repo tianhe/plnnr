@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   root 'home#index'
   namespace :v1 do
     resources :stages,  only: [:index]
-    resources :user_tasks,   only: [:update, :index]
-    resources :user_actions, only: [:update, :index]
-    resources :user_profiles, only: [:update, :show]
+    resources :user_tasks,   only: [:index, :update]
+    resources :user_actions, only: [:index, :update]
+    resources :user_profiles, only: [:show, :update]
   end
 
   # Example of regular route:

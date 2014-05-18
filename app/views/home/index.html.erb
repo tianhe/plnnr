@@ -1,17 +1,57 @@
-<div class ='stage'>
-<%= @stage.name %>
-
-<%- @stage.tasks.to_a.each do |task| %>
-  <div class='task'>
-  <%= task.description %>
-  <%- task.main_actions.to_a.each do |main| %>
-    <div class='main-action'>
-      <%= main.description %>
-    </div>
-  <% end %>
-  </div>
-<% end %>
+<div id='header'>
+  <ul class='wrapper'>
+    <li class='logo'>
+      Plnner
+    </li>
+    <li class='logout'>
+      Logout
+    </li>
+    <li class='profile'>
+      Profile
+    </li>
+  </ul>
 </div>
 
+<div id ='stages'>
+  <div id = 'current-stage'>
+    Pre-Search
+  </div>
+  <ul id = 'stages-nav'>
+    <li class='pre-search nav-element'>
+      Pre-Search
+    </li>
+    <li class='search nav-element'>
+      Search
+    </li>
+    <li class='close nav-element'>
+      Close
+    </li>
+    <li class='post-close nav-element'>
+      Post-Close
+    <li>
+  </ul>
+</div>
+
+
+<script type="text/x-handlebars">
+  <div id='main'>
+    <div id='tasks-pane'>
+      <%- @stage.tasks.to_a.each_with_index do |task, index| %>
+        <%- style = index==0 ? 'task-wrapper first' : 'task-wrapper' %>
+        <div class='<%= style %>' >
+          <span> <%= task.description %> </span>
+        </div>
+      <% end %>
+    </div>
+
+    <div id='task-detail-pane'>
+      <%- @stage.tasks.first.main_actions.to_a.each do |main| %>
+        <div class='main-action'>
+          <%= main.description %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</script>
 
 <%= javascript_include_tag "templates/all" %>

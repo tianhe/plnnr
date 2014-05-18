@@ -15,9 +15,6 @@ task = stage.tasks.create(name: 'Credit Score', description: 'Your credit score 
 task = stage.tasks.create(name: 'Mortgage', description: 'Calculate your mortgage rate', position: 3)
 task = stage.tasks.create(name: 'House Budget', description: 'Using your annual income, credit score', position: 4)
 
-
-
-
 stage = Stage.create(name: 'Search',    position: 2)
 stage = Stage.create(name: 'Close',     position: 3)
 stage = Stage.create(name: 'Postclose', position: 4)
