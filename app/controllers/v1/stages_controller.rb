@@ -1,5 +1,6 @@
 class V1::StagesController < ApplicationController
   def index
-    @stages = Stage.all.to_a
+    @stages = Stage.all
+    render json: @stages
   end
 end

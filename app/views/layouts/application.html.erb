@@ -3,13 +3,26 @@
 <head>
   <title>Plnnr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application' %>
 </head>
 <body>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+
+<div id='site-header'>
+  <ul class='wrapper'>
+    <li id='logo'>
+      Plnner
+    </li>
+    <li id='logout'>
+      Logout
+    </li>
+    <li id='profile'>
+      Profile
+    </li>
+  </ul>
+</div>
 
 <%= yield %>
 
