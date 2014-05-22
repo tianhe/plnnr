@@ -48,6 +48,10 @@ gem 'ember-rails'
 gem 'ember-source'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl'
