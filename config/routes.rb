@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'stages/index'
 
   get 'stage/index'
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
   root 'home#index'
   namespace :v1 do
     resources :stages,  only: [:index]
+    resources :sessions, only: [:destroy]
     resources :user_tasks,   only: [:index, :update]
     resources :user_actions, only: [:index, :update]
     resources :user_profiles, only: [:show, :update]

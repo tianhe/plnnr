@@ -46,6 +46,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'ember-rails'
 gem 'ember-source'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
   gem 'rspec-rails'

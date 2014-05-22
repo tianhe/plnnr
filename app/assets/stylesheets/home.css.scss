@@ -29,17 +29,17 @@ body {
   background-color: $blue;
   .wrapper {
     position: relative;
-    .logo {
+    #logo {
       left: 0px;
       float: left;
     }
 
-    .profile {
+    #profile {
       width: 100px;
       float: right;
     }
 
-    .logout {
+    #logout {
       width: 100px;
       float: right;
     }
