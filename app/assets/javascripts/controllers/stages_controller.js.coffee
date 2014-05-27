@@ -1,1 +1,0 @@
-class Plnnr.StagesController extends Ember.ArrayController

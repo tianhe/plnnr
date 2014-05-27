@@ -1,0 +1,9 @@
+<div id='tasks-pane'>
+{{#each}}
+  {{#link-to "task" this}}
+    <div class='task-wrapper' >
+      <span> {{description}} </span>
+    </div>
+  {{/link-to}}
+{{/each}}
+</div>

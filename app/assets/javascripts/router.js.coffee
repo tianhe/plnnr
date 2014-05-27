@@ -1,18 +1,40 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 Plnnr.Router.map ()->
-  @resource('stages', { path: '/'})
-  @resource('tasks', { path: '/'}, ->
-      @resource('action', { path: '/action/:action_id'})
-  )
+  @resource 'stages', { path: '/' }
+  @resource 'stage', { path: 'stages/:stage_id' }, ->
+    @resource 'task', { path: 'tasks/:task_id' }
 
-class Plnnr.StagesRoute extends Ember.Route
-  setupController: (controller, stages) ->
-    controller.set('model', stages)    
-  # model: ->
-  #   @store.find('stages')
-
-
-class Plnnr.ActionRoute extends Ember.Route
+Plnnr.ApplicationRoute = Ember.Route.extend
   model: (params) ->
-    @store.find('action', params.action_id)
+    @store.find('stage')
+  renderTemplate: ->
+    @render()
+    @render('stages/index', 
+      outlet: 'stages',
+      into: 'application'
+    )
+
+Plnnr.StagesRoute = Ember.Route.extend
+  model: (params) ->
+    @store.find('stage')
+  # setupController: ->
+  #   console.log('stages controller')
+
+Plnnr.StageRoute = Ember.Route.extend
+  model: (params) ->
+    @store.find('stage', params.stage_id)
+  renderTemplate: ->
+    @render('stages/show')
+
+Plnnr.TasksRoute = Ember.Route.extend
+  model: ->
+    @store.find('task')
+  # setupController: ->
+  #   console.log('tasks controller')
+
+Plnnr.TaskRoute = Ember.Route.extend
+  model: (params) ->    
+    @store.find('task', params.task_id)
+  renderTemplate: ->
+    @render('tasks/show')

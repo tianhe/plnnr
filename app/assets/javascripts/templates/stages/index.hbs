@@ -1,0 +1,9 @@
+<ul id='stages-nav'>
+  {{#each}}
+    <li class='nav-element'>
+      {{#link-to 'stage' this}}
+        {{name}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
