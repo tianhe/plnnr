@@ -18,20 +18,12 @@ Plnnr.ApplicationRoute = Ember.Route.extend
 Plnnr.StagesRoute = Ember.Route.extend
   model: (params) ->
     @store.find('stage')
-  # setupController: ->
-  #   console.log('stages controller')
 
 Plnnr.StageRoute = Ember.Route.extend
   model: (params) ->
     @store.find('stage', params.stage_id)
   renderTemplate: ->
     @render('stages/show')
-
-Plnnr.TasksRoute = Ember.Route.extend
-  model: ->
-    @store.find('task')
-  # setupController: ->
-  #   console.log('tasks controller')
 
 Plnnr.TaskRoute = Ember.Route.extend
   model: (params) ->    
