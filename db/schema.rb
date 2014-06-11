@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522010607) do
+ActiveRecord::Schema.define(version: 20140611030750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,13 @@ ActiveRecord::Schema.define(version: 20140522010607) do
     t.string   "name"
     t.text     "description"
     t.integer  "position"
-    t.string   "type"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "triggering_condition"
-    t.integer  "parent_action_id"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
   end
 
   create_table "active_admin_comments", force: true do |t|
@@ -78,6 +79,16 @@ ActiveRecord::Schema.define(version: 20140522010607) do
     t.datetime "updated_at"
   end
 
+  create_table "rules", force: true do |t|
+    t.string  "description"
+    t.integer "triggering_action_id"
+    t.integer "resulting_action_id"
+    t.integer "condition_1"
+    t.string  "trigger_1"
+    t.string  "condition_2"
+    t.string  "trigger_2"
+  end
+
   create_table "stages", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -101,6 +112,7 @@ ActiveRecord::Schema.define(version: 20140522010607) do
     t.integer  "status",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "results"
   end
 
   create_table "user_profiles", force: true do |t|
@@ -114,6 +126,7 @@ ActiveRecord::Schema.define(version: 20140522010607) do
     t.integer  "actual_mortgage_amount"
     t.decimal  "actual_mortgage_rate"
     t.string   "stage"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "annual_net_income"

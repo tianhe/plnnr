@@ -8,43 +8,17 @@ $white: white;
 
 $font-stack: Helvetica, sans-serif;
 
-ul {
-  list-style-type: none;
-}
-
-.html {
-  padding: 0px;
-}
-
 body {
   font: 100% $font-stack;
   margin: 0px;
   background-color: lightgreen;
 }
 
-#site-header {
-  width: 100%;
-  height: 20px;
-  padding: 20px;
-  background-color: $blue;
-  .wrapper {
-    position: relative;
-    #logo {
-      left: 0px;
-      float: left;
-    }
-
-    #profile {
-      width: 100px;
-      float: right;
-    }
-
-    #logout {
-      width: 100px;
-      float: right;
-    }
-  }
+#nav-links {
+  float: right;
+  right: 0px;
 }
+
 .notice, .alert {
   display: none;
 }

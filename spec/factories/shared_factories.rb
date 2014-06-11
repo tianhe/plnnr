@@ -37,6 +37,14 @@ FactoryGirl.define do
     url { Faker::Internet.url } 
   end
 
+  factory :main_action, parent: :action do
+    task
+  end
+
+  factory :feedback_action, parent: :action do
+    main_action
+  end
+
   factory :task do
     stage
     name Faker::Lorem.sentence(3)

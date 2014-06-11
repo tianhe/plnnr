@@ -10,6 +10,7 @@ gem 'unicorn'
 gem 'devise'
 
 gem 'acts_as_list'
+gem 'awesome_nested_set'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -48,6 +49,9 @@ gem 'ember-rails'
 gem 'ember-source'
 gem 'active_model_serializers'
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+gem 'wongi-engine'
+gem 'twitter-bootstrap-rails'
 
 group :production, :staging do
   gem 'rails_12factor'

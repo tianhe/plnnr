@@ -1,9 +1,12 @@
-<div id='tasks-pane'>
-{{#each}}
-  {{#link-to "task" this}}
-    <div class='task-wrapper' >
-      <span> {{name}} </span>
-    </div>
-  {{/link-to}}
-{{/each}}
+<div id='tasks-pane' class='span3'>
+  <div class='well sidebar-nav'>
+    <h3> Pre-Search </h3>
+    <ul class="nav nav-list">
+    {{#each}}
+      {{#link-to "task" this}}
+        <li> {{name}} </li>
+      {{/link-to}}
+    {{/each}}
+    </ul>
+  </div>
 </div>

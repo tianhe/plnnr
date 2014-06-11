@@ -1,4 +1,4 @@
-Plnnr.Task = DS.Model.extend
+Lazyweb.Task = DS.Model.extend
   stage:        DS.belongsTo("stage")
   mainActions:  DS.hasMany("mainAction")
   name:         DS.attr("string")
