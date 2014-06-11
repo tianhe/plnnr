@@ -1,6 +1,6 @@
 Lazyweb.Task = DS.Model.extend
   stage:        DS.belongsTo("stage")
-  mainActions:  DS.hasMany("mainAction")
+  actions:      DS.hasMany("action")
   name:         DS.attr("string")
   description:  DS.attr("string")
   position:     DS.attr("number")

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe V1::StagesController do
+describe V1::ActionsController do
   render_views
 
   describe "GET 'index'" do    

@@ -33,16 +33,7 @@ FactoryGirl.define do
     name Faker::Lorem.sentence(3)
     description Faker::Lorem.paragraph
     position 1
-    type ""
     url { Faker::Internet.url } 
-  end
-
-  factory :main_action, parent: :action do
-    task
-  end
-
-  factory :feedback_action, parent: :action do
-    main_action
   end
 
   factory :task do

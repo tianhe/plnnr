@@ -8,6 +8,4 @@ describe Task do
 
   it { should belong_to(:stage) }
   it { should have_many(:actions) }
-  it { should have_many(:main_actions) }
-  it { should have_many(:feedback_actions) }
 end

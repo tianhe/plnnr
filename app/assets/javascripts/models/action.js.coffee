@@ -1,5 +1,4 @@
-Lazyweb.FeedbackAction = DS.Model.extend
-  main_action:  DS.belongsTo("main_action")
+Lazyweb.Action = DS.Model.extend
   task:         DS.belongsTo("task")
   name:         DS.attr("string")
   description:  DS.attr("string")

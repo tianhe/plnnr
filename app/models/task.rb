@@ -8,6 +8,4 @@ class Task < ActiveRecord::Base
 #  acts_as_list scope: :stage
   
   has_many :actions, -> { order('position ASC') }
-  has_many :main_actions, -> { order('position ASC') }
-  has_many :feedback_actions, -> { order('position ASC') }
 end
