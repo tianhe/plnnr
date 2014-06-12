@@ -10,7 +10,6 @@ gem 'unicorn'
 gem 'devise'
 
 gem 'acts_as_list'
-gem 'awesome_nested_set'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

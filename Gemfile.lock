@@ -51,8 +51,6 @@ GEM
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
-    awesome_nested_set (2.1.6)
-      activerecord (>= 3.0.0)
     barber (0.4.2)
       ember-source
       execjs
@@ -280,7 +278,6 @@ DEPENDENCIES
   active_model_serializers
   activeadmin!
   acts_as_list
-  awesome_nested_set
   capybara
   coffee-rails (~> 4.0.0)
   debugger
