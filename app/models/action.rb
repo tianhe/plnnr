@@ -6,8 +6,8 @@ class Action < ActiveRecord::Base
   
   belongs_to :task
 #  acts_as_list scope: :task
-#  acts_as_nested_set
   
+  has_many :feedbacks    
   has_many :providers, through: :action_providers
   has_many :action_providers
 end

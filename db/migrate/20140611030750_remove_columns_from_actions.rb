@@ -1,6 +1,6 @@
 class RemoveColumnsFromActions < ActiveRecord::Migration
   def change
-    remove_column :actions, :triggering_condition, :string
+    # remove_column :actions, :triggering_condition, :string
     # remove_column :actions, :type
     # remove_column :actions, :parent_action_id
 

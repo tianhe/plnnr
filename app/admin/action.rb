@@ -1,10 +1,10 @@
-ActiveAdmin.register FeedbackAction do
+ActiveAdmin.register Action do
 
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :task_id, :name, :description, :parent_action_id, :triggering_condition, :position
+  permit_params :task_id, :name, :description, :position
   #
   # or
   #
