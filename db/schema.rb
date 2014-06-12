@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20140612110910) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "triggering_condition"
   end
 
   create_table "active_admin_comments", force: true do |t|

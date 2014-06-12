@@ -5,7 +5,6 @@ class CreateActions < ActiveRecord::Migration
       t.string  :name
       t.text    :description
       t.integer :position
-      t.string  :triggering_condition
       t.string  :url
 
       t.timestamps
