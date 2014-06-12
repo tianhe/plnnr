@@ -13,5 +13,10 @@ class CreateRules < ActiveRecord::Migration
     FeedbackAction.all.each do |f|
       Rule.create(triggering_action_id: f.parent_action_id, resulting_action_id: f.id)
     end    
+
+    FeedbackAction.all.each do |f|
+      Feedback.create name: f.name, description: f.description, action_id: f.parent_action_id
+    end
+
   end
 end

@@ -1,2 +1,3 @@
 class MainAction < Action
 end
+
