@@ -1,2 +1,0 @@
-class FeedbackAction < Action
-end

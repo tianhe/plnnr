@@ -10,16 +10,16 @@ class CreateRules < ActiveRecord::Migration
       t.string  :trigger_2
     end
 
-    FeedbackAction.all.each do |f|
-      Rule.create(triggering_action_id: f.parent_action_id, resulting_action_id: f.id)
-    end    
+    # FeedbackAction.all.each do |f|
+    #   Rule.create(triggering_action_id: f.parent_action_id, resulting_action_id: f.id)
+    # end    
 
-    FeedbackAction.all.each do |f|
-      feedback = Feedback.create name: f.name, description: f.description, action_id: f.parent_action_id
-      rule = Rule.find_by(triggering_action_id: f.parent_action_id, resulting_action_id: f.id)
-      rule.resulting_action_id = feedback.id
-      rule.save!
-    end
+    # FeedbackAction.all.each do |f|
+    #   feedback = Feedback.create name: f.name, description: f.description, action_id: f.parent_action_id
+    #   rule = Rule.find_by(triggering_action_id: f.parent_action_id, resulting_action_id: f.id)
+    #   rule.resulting_action_id = feedback.id
+    #   rule.save!
+    # end
 
   end
 end
