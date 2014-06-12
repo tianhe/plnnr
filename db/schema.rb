@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612105510) do
+ActiveRecord::Schema.define(version: 20140612110910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(version: 20140612105510) do
 
   create_table "rules", force: true do |t|
     t.string  "description"
-    t.integer "triggering_action_id"
-    t.integer "resulting_action_id"
+    t.integer "action_id"
+    t.integer "feedback_id"
     t.integer "condition_1"
     t.string  "trigger_1"
     t.string  "condition_2"
